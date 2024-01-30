@@ -11,13 +11,13 @@ export default function TaskLine(props) {
 		textDecoration: "line-through"
 	}
 	const inProcess = {
-		textDecoration : "none"
+		textDecoration: "none"
 	}
 	return (
 		<div className="taskLine">
 			<div className="taskLine_el">{task.id}</div>
-			<div className="taskLine_el description" style={task.status?
-			done: inProcess}>{task.description}</div>
+			<div className="taskLine_el description" style={task.status ?
+				inProcess : done}>{task.description}</div>
 			<div className="taskLine_el">{task.openTask}</div>
 			<div className="taskLine_el">{task.closeTask}</div>
 			<FontAwesomeIcon className="taskLine_el_icon" icon={faPencil} />
